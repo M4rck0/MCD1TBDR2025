@@ -1,4 +1,4 @@
-# PostgreSQL: 
+PostgreSQL: 
 
 PostgreSQL es un sistema de gestión de bases de datos objeto-relacional de código abierto, distribuido bajo licencia BSD. Se caracteriza por su estabilidad, soporte para transacciones ACID, integridad referencial y funcionalidades avanzadas como replicación sincrónica, autenticación múltiple, acceso encriptado vía SSL y recuperación punto en el tiempo. Está disponible para múltiples sistemas operativos, incluyendo Windows, Linux, Solaris y macOS. Utiliza un modelo cliente/servidor con multiprocesos, lo que permite que si un proceso falla, no afecte al resto del sistema (Zea Ordóñez, Molina Ríos y Redrován Castillo, 2017). 
 
