@@ -1,5 +1,17 @@
 En una aplicación de [transporte](https://github.com/Geo-y20/Uber-Rides-Data-Analysis), los usuarios solicitan viajes que tienen registrados datos como la fecha y hora de inicio y fin del recorrido, el lugar donde comenzó y terminó el viaje, la distancia en millas y el propósito del mismo. Cada viaje puede estar categorizado como personal o de negocios. Por ejemplo, algunos viajes se realizan para asistir a juntas de trabajo, otros para realizar diligencias o simplemente para entretenerse. Esta información permite analizar patrones de movilidad, duración promedio, motivos más comunes y zonas de mayor tráfico. 
 
+
+| Atributo    | Descripción                                         | Tipo de dato       |
+|-------------|-----------------------------------------------------|--------------------|
+| START_DATE  | Fecha y hora de inicio del viaje                    | `datetime`         |
+| END_DATE    | Fecha y hora de finalización del viaje              | `datetime`         |
+| CATEGORY    | Tipo de viaje (ej. "Business", "Personal")          | `texto (string)`   |
+| START       | Ciudad o punto de partida                           | `texto (string)`   |
+| STOP        | Ciudad o punto de destino                           | `texto (string)`   |
+| MILES       | Distancia recorrida en millas                       | `decimal` o `float`|
+| PURPOSE     | Motivo del viaje (ej. "Meeting")                    | `texto (string)`   |
+
+
 PostgreSQL: 
 
 PostgreSQL es un sistema de gestión de bases de datos objeto-relacional de código abierto, distribuido bajo licencia BSD. Se caracteriza por su estabilidad, soporte para transacciones ACID, integridad referencial y funcionalidades avanzadas como replicación sincrónica, autenticación múltiple, acceso encriptado vía SSL y recuperación punto en el tiempo. Está disponible para múltiples sistemas operativos, incluyendo Windows, Linux, Solaris y macOS. Utiliza un modelo cliente/servidor con multiprocesos, lo que permite que si un proceso falla, no afecte al resto del sistema (Zea Ordóñez, Molina Ríos y Redrován Castillo, 2017). 
