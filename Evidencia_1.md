@@ -1,4 +1,4 @@
-En una aplicación de transporte, los usuarios solicitan viajes que tienen registrados datos como la fecha y hora de inicio y fin del recorrido, el lugar donde comenzó y terminó el viaje, la distancia en millas y el propósito del mismo. Cada viaje puede estar categorizado como personal o de negocios. Por ejemplo, algunos viajes se realizan para asistir a juntas de trabajo, otros para realizar diligencias o simplemente para entretenerse. Esta información permite analizar patrones de movilidad, duración promedio, motivos más comunes y zonas de mayor tráfico. 
+En una aplicación de [transporte](https://github.com/Geo-y20/Uber-Rides-Data-Analysis), los usuarios solicitan viajes que tienen registrados datos como la fecha y hora de inicio y fin del recorrido, el lugar donde comenzó y terminó el viaje, la distancia en millas y el propósito del mismo. Cada viaje puede estar categorizado como personal o de negocios. Por ejemplo, algunos viajes se realizan para asistir a juntas de trabajo, otros para realizar diligencias o simplemente para entretenerse. Esta información permite analizar patrones de movilidad, duración promedio, motivos más comunes y zonas de mayor tráfico. 
 
 PostgreSQL: 
 
@@ -27,6 +27,8 @@ Para esta actividad, elegí utilizar PostgreSQL como sistema de gestión de base
 Ordóñez, M. P. Z., Ríos, J. R. M., & Castillo, F. F. R. (2017). Administración de Bases de datos con PostgreSQL (Vol. 19). 3Ciencias. 
 
 Moreno Arboleda, F. J., Quintero Rendón, J. E., & Rueda Vásquez, R. (2016). Una comparación de rendimiento entre Oracle y MongoDB. Ciencia e Ingeniería Neogranadina, 26(1), 109-129. 
+
+https://github.com/Geo-y20/Uber-Rides-Data-Analysis 
 
 Casillas Santillán, L. A., Gibert Ginestà, M., & Pérez Mora, Ó. (s.f.). Bases de datos en MySQL. Fundación Universitaria Oberta de Cataluña (FUOC), pp. 7–8. 
 
