@@ -6,9 +6,13 @@ Se realizó la conversión de la base de datos no estructurada sobre viajes en u
 
 - **Rectángulo** para la entidad `VIAJE`
 - **Elipses** para los atributos simples
-- **Números** indicados en las líneas que conectan los nodos
+- **Hexágonos** para indicar el dominio de cada atributo
+- **Elipse subrayada** para identificar la clave primaria (`START_DATE`)
+- **Líneas** que conectan cada atributo con la entidad principal
 
-![image](https://github.com/user-attachments/assets/4a5ac5ba-5bae-4b4f-aaa2-8f32c5f03491)
+> En este caso no se utilizaron **rombos** ni **cardinalidades (1:N)** ya que la base de datos describe únicamente una **entidad principal (`VIAJE`)** sin relaciones con otras entidades, por lo que no se requiere representar asociaciones entre múltiples tablas.
+
+![tarea 2](https://github.com/user-attachments/assets/6c6b73f6-b66e-41e1-8dda-b5ef6bedcfbc)
 
 ---
 
@@ -25,4 +29,3 @@ Se realizó la conversión de la base de datos no estructurada sobre viajes en u
 | PURPOSE      | Propósito del viaje                   | string                | {'Meeting', 'Errand', 'Entertainment'}   |
 
 ---
-
