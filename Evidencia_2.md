@@ -6,9 +6,7 @@ Se realizó la conversión de la base de datos no estructurada sobre viajes en u
 
 - **Rectángulo** para la entidad `VIAJE`
 - **Elipses** para los atributos simples
-- **Elipses subrayadas** si existiera una clave primaria
-- **Rombos** para representar relaciones o atributos multivaluados (en este caso no hay)
-- **Números** indicados en las líneas que conectan los nodos, como se solicitó
+- **Números** indicados en las líneas que conectan los nodos
 
 ![image](https://github.com/user-attachments/assets/4a5ac5ba-5bae-4b4f-aaa2-8f32c5f03491)
 
