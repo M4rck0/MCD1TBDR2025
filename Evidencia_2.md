@@ -9,8 +9,6 @@ Se realizó la conversión de la base de datos no estructurada sobre viajes en u
 - **Hexágonos** para indicar el dominio de cada atributo
 - **Líneas** que conectan cada atributo con la entidad principal
 
-> En este caso no se utilizaron **rombos** ni **cardinalidades (1:N)** ya que la base de datos describe únicamente una **entidad principal (`VIAJE`)** sin relaciones con otras entidades, por lo que no se requiere representar asociaciones entre múltiples tablas.
-
 <img width="707" alt="Tarea_2_VF" src="https://github.com/user-attachments/assets/19c7aac2-b597-4952-a4c3-c61c699deef4" />
 
 
