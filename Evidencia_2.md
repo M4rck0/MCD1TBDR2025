@@ -7,7 +7,6 @@ Se realizó la conversión de la base de datos no estructurada sobre viajes en u
 - **Rectángulo** para la entidad `VIAJE`
 - **Elipses** para los atributos simples
 - **Hexágonos** para indicar el dominio de cada atributo
-- **Elipse subrayada** para identificar la clave primaria (`START_DATE`)
 - **Líneas** que conectan cada atributo con la entidad principal
 
 > En este caso no se utilizaron **rombos** ni **cardinalidades (1:N)** ya que la base de datos describe únicamente una **entidad principal (`VIAJE`)** sin relaciones con otras entidades, por lo que no se requiere representar asociaciones entre múltiples tablas.
