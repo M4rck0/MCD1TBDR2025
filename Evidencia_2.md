@@ -26,7 +26,7 @@ Se realizó la conversión de la base de datos no estructurada sobre viajes en u
 | CATEGORY     | Tipo de viaje                         | string                | {'Business', 'Personal'}                  |
 | START        | Lugar donde inicia el viaje           | string                | {'Monterrey', 'CDMX', 'Guadalajara'}     |
 | STOP         | Lugar donde termina el viaje          | string                | {'San Pedro', 'CDMX', 'Toluca'}          |
-| MILES        | Distancia recorrida en millas         | float o decimal       | Valores positivos, por ejemplo: 3.4, 7.8  |
+| MILES        | Distancia recorrida en millas         | float                 | Valores positivos, por ejemplo: 3.4, 7.8  |
 | PURPOSE      | Propósito del viaje                   | string                | {'Meeting', 'Errand', 'Entertainment'}   |
 
 ---
