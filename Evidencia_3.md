@@ -243,7 +243,8 @@ erDiagram
   Employee ||--o{ Customer : atiende
   Invoice ||--o{ InvoiceLine : tiene
   Track ||--o{ InvoiceLine : vendido_como
-  
+
+```markdown
 
 # Operaciones con Álgebra Relacional
 
