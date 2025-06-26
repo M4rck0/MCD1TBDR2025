@@ -244,3 +244,39 @@ erDiagram
   Invoice ||--o{ InvoiceLine : tiene
   Track ||--o{ InvoiceLine : vendido_como
   
+
+
+
+# Operaciones con Álgebra Relacional
+
+## 1. Mostrar los nombres de todas las canciones
+**Operación**: Proyección  
+**Explicación**: Selecciono únicamente el nombre de cada canción, sin repetir otras columnas.
+
+
+---
+
+## 2. Obtener todos los álbumes del artista con `ArtistId = 5`
+**Operación**: Selección  
+**Explicación**: Filtro los registros de la tabla Album para mostrar solo los álbumes del artista 5.
+
+
+---
+
+## 3. Ver los nombres de canciones junto con el título del álbum al que pertenecen
+**Operación**: Composición (JOIN)  
+**Explicación**: Uno las tablas Track y Album usando su relación para ver el nombre de la canción y el título del álbum.
+
+
+---
+
+## 4. Mostrar todas las canciones que aparecen en playlists
+**Operación**: Composición (JOIN)  
+**Explicación**: Uno las tablas PlaylistTrack y Track para saber qué canciones están en una playlist.
+
+
+
+---
+
+
+
