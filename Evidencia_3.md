@@ -244,7 +244,7 @@ erDiagram
   Invoice ||--o{ InvoiceLine : tiene
   Track ||--o{ InvoiceLine : vendido_como
 
-```markdown
+```mermaid
 
 # Operaciones con Álgebra Relacional
 
