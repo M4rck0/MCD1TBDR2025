@@ -133,24 +133,55 @@
 
 # Punto 2 – Representación del Diagrama Relacional
 
-Artist(_ArtistId_, Name)
+```mermaid
+erDiagram
 
-Album(_AlbumId_, Title, ArtistId)
+  EQUIPO {
+    SERIAL ID_EQUIPO PK
+    VARCHAR NOMBRE_EQUIPO
+    INTEGER PL
+    NUMERIC EDAD
+    INTEGER POS
+    INTEGER PJ
+    INTEGER TITULAR
+    INTEGER MINUTOS
+  }
 
-Track(_TrackId_, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+  JUGADOR {
+    SERIAL ID_JUGADOR PK
+    VARCHAR NOMBRE
+    VARCHAR PAIS
+    VARCHAR POSC
+    INTEGER EQUIPO_ID FK
+    DATE NACIMIENTO
+    INTEGER PJ
+    INTEGER TITULAR
+    INTEGER MINUTOS
+    NUMERIC NOVENTAS
+    INTEGER GOLES
+    INTEGER ASISTENCIAS
+    INTEGER GOLES_MAS_ASIST
+    INTEGER PENALES
+    INTEGER TARJETAS_AMARILLAS
+    INTEGER TARJETAS_ROJAS
+  }
 
-MediaType(_MediaTypeId_, Name)
+  PARTIDO {
+    SERIAL ID_PARTIDO PK
+    INTEGER SEMANA
+    VARCHAR DIA
+    DATE FECHA
+    TIME HORA
+    INTEGER EQUIPO_LOCAL_ID FK
+    NUMERIC XG
+    INTEGER MARCADOR_LOCAL
+    INTEGER EQUIPO_VISITANTE_ID FK
+    INTEGER MARCADOR_VISITANTE
+    INTEGER ASISTENCIA
+    VARCHAR SEDE
+    VARCHAR ARBITRO
+  }
 
-Genre(_GenreId_, Name)
-
-Playlist(_PlaylistId_, Name)
-
-PlaylistTrack(_PlaylistId_, _TrackId_)
-
-Customer(_CustomerId_, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId)
-
-Employee(_EmployeeId_, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email)
-
-Invoice(_InvoiceId_, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total)
-
-InvoiceLine(_InvoiceLineId_, InvoiceId, TrackId, UnitPrice, Quantity)
+  EQUIPO ||--o{ JUGADOR : tiene
+  EQUIPO ||--o{ PARTIDO : juega_como_local
+  EQUIPO ||--o{ PARTIDO : juega_como_visitante
