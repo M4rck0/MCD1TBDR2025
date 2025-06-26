@@ -137,18 +137,18 @@
 erDiagram
 
   Artist {
-    INTEGER ArtistId Llave Primaria
+    INTEGER ArtistId PK
     TEXT Name
   }
 
   Album {
-    INTEGER AlbumId Llave Primaria
+    INTEGER AlbumId PK
     TEXT Title
     INTEGER ArtistId
   }
 
   Track {
-    INTEGER TrackId Llave Primaria
+    INTEGER TrackId PK
     TEXT Name
     INTEGER AlbumId
     INTEGER MediaTypeId
@@ -160,17 +160,17 @@ erDiagram
   }
 
   MediaType {
-    INTEGER MediaTypeId Llave Primaria
+    INTEGER MediaTypeId PK
     TEXT Name
   }
 
   Genre {
-    INTEGER GenreId Llave Primaria
+    INTEGER GenreId PK
     TEXT Name
   }
 
   Playlist {
-    INTEGER PlaylistId Llave Primaria
+    INTEGER PlaylistId PK
     TEXT Name
   }
 
@@ -180,7 +180,7 @@ erDiagram
   }
 
   Customer {
-    INTEGER CustomerId Llave Primaria
+    INTEGER CustomerId PK
     TEXT FirstName
     TEXT LastName
     TEXT Company
@@ -196,7 +196,7 @@ erDiagram
   }
 
   Employee {
-    INTEGER EmployeeId Llave Primaria
+    INTEGER EmployeeId PK
     TEXT LastName
     TEXT FirstName
     TEXT Title
@@ -214,7 +214,7 @@ erDiagram
   }
 
   Invoice {
-    INTEGER InvoiceId Llave Primaria
+    INTEGER InvoiceId PK
     INTEGER CustomerId
     DATE InvoiceDate
     TEXT BillingAddress
@@ -226,7 +226,7 @@ erDiagram
   }
 
   InvoiceLine {
-    INTEGER InvoiceLineId Llave Primaria
+    INTEGER InvoiceLineId PK
     INTEGER InvoiceId
     INTEGER TrackId
     NUMERIC UnitPrice
