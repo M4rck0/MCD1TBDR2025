@@ -243,4 +243,4 @@ erDiagram
   Employee ||--o{ Customer : supports
   Invoice ||--o{ InvoiceLine : has
   Track ||--o{ InvoiceLine : sold_as
-  Employee ||--|| Employee : reports_to
+  
