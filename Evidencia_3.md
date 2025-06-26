@@ -245,8 +245,6 @@ erDiagram
   Track ||--o{ InvoiceLine : vendido_como
   
 
-
-
 # Operaciones con Álgebra Relacional
 
 ## 1. Mostrar los nombres de todas las canciones
@@ -276,7 +274,6 @@ erDiagram
 
 
 
----
 
 
 
