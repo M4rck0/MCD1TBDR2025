@@ -1,4 +1,4 @@
-# Esquema del Modelo Relacional - Chinook
+# Esquema del Modelo Relacional 
 
 ## Tabla: Artist
 | Columna   | Tipo     | Clave     |
