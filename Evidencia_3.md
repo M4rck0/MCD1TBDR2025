@@ -22,9 +22,9 @@
 |-------------|----------|-----------|
 | TrackId     | INTEGER  | PRIMARY KEY |
 | Name        | TEXT     |           |
-| AlbumId     | INTEGER  |  |
-| MediaTypeId | INTEGER  |  |
-| GenreId     | INTEGER  | |
+| AlbumId     | INTEGER  |           |
+| MediaTypeId | INTEGER  |           |
+| GenreId     | INTEGER  |           |
 | Composer    | TEXT     |           |
 | Milliseconds| INTEGER  |           |
 | Bytes       | INTEGER  |           |
@@ -59,8 +59,8 @@
 ## Tabla: PlaylistTrack
 | Columna   | Tipo    | Clave     |
 |-----------|---------|-----------|
-| PlaylistId| INTEGER |  |
-| TrackId   | INTEGER | |
+| PlaylistId| INTEGER |           |
+| TrackId   | INTEGER |           |
 
 ---
 
@@ -79,7 +79,7 @@
 | Phone       | TEXT    |           |
 | Fax         | TEXT    |           |
 | Email       | TEXT    |           |
-| SupportRepId| INTEGER |  |
+| SupportRepId| INTEGER |           |
 
 ---
 
@@ -90,7 +90,7 @@
 | LastName    | TEXT    |           |
 | FirstName   | TEXT    |           |
 | Title       | TEXT    |           |
-| ReportsTo   | INTEGER |  |
+| ReportsTo   | INTEGER |           |
 | BirthDate   | DATE    |           |
 | HireDate    | DATE    |           |
 | Address     | TEXT    |           |
@@ -108,7 +108,7 @@
 | Columna         | Tipo    | Clave     |
 |-----------------|---------|-----------|
 | InvoiceId       | INTEGER | PRIMARY KEY |
-| CustomerId      | INTEGER |  |
+| CustomerId      | INTEGER |           |
 | InvoiceDate     | DATE    |           |
 | BillingAddress  | TEXT    |           |
 | BillingCity     | TEXT    |           |
@@ -123,7 +123,7 @@
 | Columna     | Tipo    | Clave     |
 |-------------|---------|-----------|
 | InvoiceLineId | INTEGER | PRIMARY KEY |
-| InvoiceId   | INTEGER |  |
-| TrackId     | INTEGER | |
+| InvoiceId   | INTEGER |           |
+| TrackId     | INTEGER |           |
 | UnitPrice   | NUMERIC |           |
 | Quantity    | INTEGER |           |
