@@ -137,18 +137,18 @@
 erDiagram
 
   Artist {
-    INTEGER ArtistId PK
+    INTEGER ArtistId Llave Primaria
     TEXT Name
   }
 
   Album {
-    INTEGER AlbumId PK
+    INTEGER AlbumId Llave Primaria
     TEXT Title
     INTEGER ArtistId
   }
 
   Track {
-    INTEGER TrackId PK
+    INTEGER TrackId Llave Primaria
     TEXT Name
     INTEGER AlbumId
     INTEGER MediaTypeId
@@ -160,17 +160,17 @@ erDiagram
   }
 
   MediaType {
-    INTEGER MediaTypeId PK
+    INTEGER MediaTypeId Llave Primaria
     TEXT Name
   }
 
   Genre {
-    INTEGER GenreId PK
+    INTEGER GenreId Llave Primaria
     TEXT Name
   }
 
   Playlist {
-    INTEGER PlaylistId PK
+    INTEGER PlaylistId Llave Primaria
     TEXT Name
   }
 
@@ -180,7 +180,7 @@ erDiagram
   }
 
   Customer {
-    INTEGER CustomerId PK
+    INTEGER CustomerId Llave Primaria
     TEXT FirstName
     TEXT LastName
     TEXT Company
@@ -196,7 +196,7 @@ erDiagram
   }
 
   Employee {
-    INTEGER EmployeeId PK
+    INTEGER EmployeeId Llave Primaria
     TEXT LastName
     TEXT FirstName
     TEXT Title
@@ -214,7 +214,7 @@ erDiagram
   }
 
   Invoice {
-    INTEGER InvoiceId PK
+    INTEGER InvoiceId Llave Primaria
     INTEGER CustomerId
     DATE InvoiceDate
     TEXT BillingAddress
@@ -226,21 +226,21 @@ erDiagram
   }
 
   InvoiceLine {
-    INTEGER InvoiceLineId PK
+    INTEGER InvoiceLineId Llave Primaria
     INTEGER InvoiceId
     INTEGER TrackId
     NUMERIC UnitPrice
     INTEGER Quantity
   }
 
-  Artist ||--o{ Album : produces
-  Album ||--o{ Track : contains
-  MediaType ||--o{ Track : uses
-  Genre ||--o{ Track : categorized_as
-  Playlist ||--o{ PlaylistTrack : includes
-  Track ||--o{ PlaylistTrack : appears_in
-  Customer ||--o{ Invoice : issues
-  Employee ||--o{ Customer : supports
-  Invoice ||--o{ InvoiceLine : has
-  Track ||--o{ InvoiceLine : sold_as
+  Artist ||--o{ Album : produce
+  Album ||--o{ Track : contiene
+  MediaType ||--o{ Track : usa
+  Genre ||--o{ Track : es_de_genero
+  Playlist ||--o{ PlaylistTrack : incluye
+  Track ||--o{ PlaylistTrack : aparece_en
+  Customer ||--o{ Invoice : genera
+  Employee ||--o{ Customer : atiende
+  Invoice ||--o{ InvoiceLine : tiene
+  Track ||--o{ InvoiceLine : vendido_como
   
