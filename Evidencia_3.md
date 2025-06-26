@@ -127,3 +127,30 @@
 | TrackId     | INTEGER |           |
 | UnitPrice   | NUMERIC |           |
 | Quantity    | INTEGER |           |
+
+
+
+
+# Punto 2 – Representación del Diagrama Relacional
+
+Artist(_ArtistId_, Name)
+
+Album(_AlbumId_, Title, ArtistId)
+
+Track(_TrackId_, Name, AlbumId, MediaTypeId, GenreId, Composer, Milliseconds, Bytes, UnitPrice)
+
+MediaType(_MediaTypeId_, Name)
+
+Genre(_GenreId_, Name)
+
+Playlist(_PlaylistId_, Name)
+
+PlaylistTrack(_PlaylistId_, _TrackId_)
+
+Customer(_CustomerId_, FirstName, LastName, Company, Address, City, State, Country, PostalCode, Phone, Fax, Email, SupportRepId)
+
+Employee(_EmployeeId_, LastName, FirstName, Title, ReportsTo, BirthDate, HireDate, Address, City, State, Country, PostalCode, Phone, Fax, Email)
+
+Invoice(_InvoiceId_, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingState, BillingCountry, BillingPostalCode, Total)
+
+InvoiceLine(_InvoiceLineId_, InvoiceId, TrackId, UnitPrice, Quantity)
