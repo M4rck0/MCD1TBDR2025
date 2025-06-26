@@ -131,57 +131,116 @@
 
 
 
-# Punto 2 – Representación del Diagrama Relacional
+# Representación del Diagrama Relacional
 
 ```mermaid
 erDiagram
 
-  EQUIPO {
-    SERIAL ID_EQUIPO PK
-    VARCHAR NOMBRE_EQUIPO
-    INTEGER PL
-    NUMERIC EDAD
-    INTEGER POS
-    INTEGER PJ
-    INTEGER TITULAR
-    INTEGER MINUTOS
+  Artist {
+    INTEGER ArtistId PK
+    TEXT Name
   }
 
-  JUGADOR {
-    SERIAL ID_JUGADOR PK
-    VARCHAR NOMBRE
-    VARCHAR PAIS
-    VARCHAR POSC
-    INTEGER EQUIPO_ID FK
-    DATE NACIMIENTO
-    INTEGER PJ
-    INTEGER TITULAR
-    INTEGER MINUTOS
-    NUMERIC NOVENTAS
-    INTEGER GOLES
-    INTEGER ASISTENCIAS
-    INTEGER GOLES_MAS_ASIST
-    INTEGER PENALES
-    INTEGER TARJETAS_AMARILLAS
-    INTEGER TARJETAS_ROJAS
+  Album {
+    INTEGER AlbumId PK
+    TEXT Title
+    INTEGER ArtistId
   }
 
-  PARTIDO {
-    SERIAL ID_PARTIDO PK
-    INTEGER SEMANA
-    VARCHAR DIA
-    DATE FECHA
-    TIME HORA
-    INTEGER EQUIPO_LOCAL_ID FK
-    NUMERIC XG
-    INTEGER MARCADOR_LOCAL
-    INTEGER EQUIPO_VISITANTE_ID FK
-    INTEGER MARCADOR_VISITANTE
-    INTEGER ASISTENCIA
-    VARCHAR SEDE
-    VARCHAR ARBITRO
+  Track {
+    INTEGER TrackId PK
+    TEXT Name
+    INTEGER AlbumId
+    INTEGER MediaTypeId
+    INTEGER GenreId
+    TEXT Composer
+    INTEGER Milliseconds
+    INTEGER Bytes
+    NUMERIC UnitPrice
   }
 
-  EQUIPO ||--o{ JUGADOR : tiene
-  EQUIPO ||--o{ PARTIDO : juega_como_local
-  EQUIPO ||--o{ PARTIDO : juega_como_visitante
+  MediaType {
+    INTEGER MediaTypeId PK
+    TEXT Name
+  }
+
+  Genre {
+    INTEGER GenreId PK
+    TEXT Name
+  }
+
+  Playlist {
+    INTEGER PlaylistId PK
+    TEXT Name
+  }
+
+  PlaylistTrack {
+    INTEGER PlaylistId
+    INTEGER TrackId
+  }
+
+  Customer {
+    INTEGER CustomerId PK
+    TEXT FirstName
+    TEXT LastName
+    TEXT Company
+    TEXT Address
+    TEXT City
+    TEXT State
+    TEXT Country
+    TEXT PostalCode
+    TEXT Phone
+    TEXT Fax
+    TEXT Email
+    INTEGER SupportRepId
+  }
+
+  Employee {
+    INTEGER EmployeeId PK
+    TEXT LastName
+    TEXT FirstName
+    TEXT Title
+    INTEGER ReportsTo
+    DATE BirthDate
+    DATE HireDate
+    TEXT Address
+    TEXT City
+    TEXT State
+    TEXT Country
+    TEXT PostalCode
+    TEXT Phone
+    TEXT Fax
+    TEXT Email
+  }
+
+  Invoice {
+    INTEGER InvoiceId PK
+    INTEGER CustomerId
+    DATE InvoiceDate
+    TEXT BillingAddress
+    TEXT BillingCity
+    TEXT BillingState
+    TEXT BillingCountry
+    TEXT BillingPostalCode
+    NUMERIC Total
+  }
+
+  InvoiceLine {
+    INTEGER InvoiceLineId PK
+    INTEGER InvoiceId
+    INTEGER TrackId
+    NUMERIC UnitPrice
+    INTEGER Quantity
+  }
+
+  Artist ||--o{ Album : produces
+  Album ||--o{ Track : contains
+  MediaType ||--o{ Track : uses
+  Genre ||--o{ Track : categorized_as
+  Playlist ||--o{ PlaylistTrack : includes
+  Track ||--o{ PlaylistTrack : appears_in
+  Customer ||--o{ Invoice : issues
+  Employee ||--o{ Customer : supports
+  Invoice ||--o{ InvoiceLine : has
+  Track ||--o{ InvoiceLine : sold_as
+  Employee ||--|| Employee : reports_to
