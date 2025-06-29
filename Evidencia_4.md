@@ -1,4 +1,4 @@
-# Subconjunto de Base Chinook (5 Tablas)
+# Subconjunto de Base Chinook
 
 ## 1. Crear base de datos
 
