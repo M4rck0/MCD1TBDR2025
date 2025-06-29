@@ -1,3 +1,4 @@
+
 # Funciones de Agregación en SQL
 
 ## Conteo de Frecuencia
@@ -68,6 +69,23 @@ LIMIT 1 OFFSET 874;
 
 
 
+
+
+
+
+
+## Moda 
+
+**Objetivo:** Encontrar el artista que tiene más álbumes registrados (es decir, la moda de `ArtistId` en la tabla `Album`).
+
+### Consulta SQL:
+```sql
+SELECT ar.Name AS Artista, COUNT(*) AS numero_albumes
+FROM Album al
+JOIN Artist ar ON al.ArtistId = ar.ArtistId
+GROUP BY ar.Name
+ORDER BY numero_albumes DESC
+LIMIT 1;
 
 
 
