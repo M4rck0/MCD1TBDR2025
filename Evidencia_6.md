@@ -16,7 +16,7 @@ WHERE
 ```
 
 ```markdown
-57
+34
 ```
 
 ## Mínimos o Máximos
@@ -31,6 +31,13 @@ SELECT
 FROM 
   Track;
 ```
+
+```markdown
+duracion_minima | duracion_maxima
+----------------|-----------------
+1371            | 5286953
+```
+
 
 
 
