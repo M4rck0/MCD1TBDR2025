@@ -102,12 +102,20 @@ Espere Por Mim, Morena | 207072
 
 ### Consulta SQL:
 ```sql
-SELECT ar.Name AS Artista, COUNT(*) AS numero_albumes
-FROM Album al
-JOIN Artist ar ON al.ArtistId = ar.ArtistId
-GROUP BY ar.Name
-ORDER BY numero_albumes DESC
+SELECT Composer, COUNT(*) AS cantidad
+FROM Track
+WHERE Composer IS NOT NULL
+GROUP BY Composer
+ORDER BY cantidad DESC
 LIMIT 1;
+```
+
+```markdown
+Resultado:
+```
+Composer       | cantidad
+---------------|---------
+Steve Harris   | 80
 
 
 
