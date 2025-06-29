@@ -16,7 +16,7 @@ WHERE
 ```
 
 ```markdown
-### Resultado:
+Resultado:
 ```
 57
 
@@ -34,7 +34,7 @@ FROM
 ```
 
 ```markdown
-### Resultado:
+Resultado:
 ```
 duracion_minima | duracion_maxima
 ----------------|-----------------
