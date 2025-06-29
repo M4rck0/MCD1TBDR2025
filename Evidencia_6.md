@@ -35,13 +35,13 @@ FROM
 
 **Objetivo:** Calcular el primer cuartil (Q1) de la duración de las canciones (`Milliseconds`) en la tabla `Track`, utilizando SQLite y únicamente las funciones y comandos vistos en clase.
 
-## Paso 1: Contar cuántas canciones hay en total
+### Paso 1: Contar cuántas canciones hay en total
 
 ```sql
 SELECT COUNT(*) FROM Track;
 ```
 
-## Paso 2: Calcular la posición del cuartil
+### Paso 2: Calcular la posición del cuartil
 Para encontrar el primer cuartil (Q1), se calcula el 25% del total de datos ordenados de menor a mayor.
 En este caso:
 
