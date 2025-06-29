@@ -21,6 +21,7 @@ Los datos fueron generados automáticamente en [Mockaroo](https://mockaroo.com/)
 ### Hallazgos
 - Mockaroo permite exportar en múltiples formatos útiles: `.csv`, `.json`, `.sql`, `.xlsx`, `.xml`, etc.
 - Tiene más de 210 tipos de datos predefinidos, aunque algunos están separados por género (ej. `Male Name`, `Female Name`).
+- Puedes controlar el **porcentaje de valores faltantes** (`blank %`) por columna. Por ejemplo, puedes simular que el 10% de los correos estén vacíos.
 - Si quieres combinar nombres de hombre y mujer en una sola columna, **no hay un tipo genérico llamado solo `Full Name` que mezcle ambos géneros aleatoriamente**.
 - Para lograr un "nombre completo", se puede usar una columna combinada (`First Name` + `Last Name`), pero igualmente no se controla el género del nombre.
 
