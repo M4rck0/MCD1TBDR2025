@@ -15,6 +15,10 @@ WHERE
   Composer LIKE '%Brian%';
 ```
 
+```markdown
+57
+```
+
 ## Mínimos o Máximos
 
 **Objetivo:** Obtener la duración mínima y máxima de todas las canciones registradas en la tabla `Track`.
