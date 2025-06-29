@@ -55,6 +55,11 @@ duracion_minima | duracion_maxima
 SELECT COUNT(*) FROM Track;
 ```
 
+```markdown
+Resultado:
+```
+3503
+
 ### Paso 2: Calcular la posición del cuartil
 Para encontrar el primer cuartil (Q1), se calcula el 25% del total de datos ordenados de menor a mayor.
 En este caso:
@@ -79,6 +84,10 @@ ORDER BY Milliseconds
 LIMIT 1 OFFSET 874;
 ```
 
+```markdown
+Resultado:
+```
+Espere Por Mim, Morena | 207072
 
 
 
