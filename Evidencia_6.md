@@ -38,7 +38,7 @@ Resultado:
 ```
 duracion_minima | duracion_maxima
 ----------------|-----------------
-1371            | 5286953
+1071            | 5286953
 
 
 
