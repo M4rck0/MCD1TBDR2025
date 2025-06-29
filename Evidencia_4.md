@@ -36,7 +36,6 @@ CREATE TABLE Track (
   UnitPrice FLOAT
 );
 
-
 -- Tabla Artist
 INSERT INTO Artist VALUES
 (1, 'AC/DC'),
@@ -101,4 +100,3 @@ INSERT INTO Track VALUES
 (8, 'Inject The Venom', 1, 1, 1, 'Angus Young, Malcolm Young, Brian Johnson', 210834.0, 6852860.0, 0.99),
 (9, 'Snowballed', 1, 1, 1, 'Angus Young, Malcolm Young, Brian Johnson', 203102.0, 6599424.0, 0.99),
 (10, 'Evil Walks', 1, 1, 1, 'Angus Young, Malcolm Young, Brian Johnson', 263497.0, 8611245.0, 0.99);
-
