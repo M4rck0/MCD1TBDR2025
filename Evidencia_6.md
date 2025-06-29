@@ -128,13 +128,11 @@ Steve Harris   | 80
 - Se pudo estimar el primer cuartil manualmente ordenando y accediendo a la fila correspondiente.
 
 ### Dificultades:
-- SQLite no tiene funciones estadísticas avanzadas como `NTILE()` ni `PERCENTILE_CONT()` para calcular cuantiles.
-- Las imágenes de clase no muestran el uso explícito de `OFFSET`, aunque se cubrió `LIMIT`.
+- Se hizo uso del `OFFSET`.
 - No se ha utilizado `JOIN`, por lo que se evitó en el inciso de la moda para respetar los contenidos vistos.
 
 ### Soluciones:
 - Se calculó manualmente el cuartil utilizando `COUNT(*)`, `ORDER BY`, `LIMIT` y `OFFSET`, que permite acceder a una fila específica en una tabla ordenada.
 - Se eligió `Composer` como variable para calcular la moda sin requerir `JOIN`.
-- Todas las consultas fueron formuladas con funciones vistas en clase y compatibles con SQLite.
 
 
