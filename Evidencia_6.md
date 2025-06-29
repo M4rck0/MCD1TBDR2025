@@ -17,7 +17,7 @@ WHERE
 
 ```markdown
 ### Resultado:
-```txt
+```
 57
 
 ## Mínimos o Máximos
@@ -35,7 +35,7 @@ FROM
 
 ```markdown
 ### Resultado:
-```txt
+```
 duracion_minima | duracion_maxima
 ----------------|-----------------
 1371            | 5286953
