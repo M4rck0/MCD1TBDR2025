@@ -1,4 +1,4 @@
-# Tarea 7 - Limpieza y Subconsultas en Base de Datos Chinook
+# Tarea 7 - Limpieza y Subconsultas en Base de Datos
 
 ## 1. Revisión de inconsistencias
 
