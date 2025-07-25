@@ -4,7 +4,7 @@
 
 ## Correlación entre dos conjuntos de datos
 
-Calcula el coeficiente de correlación de Pearson entre las columnas `x` e `y` de la tabla `datos`, usando la fórmula estadística estándar.
+Calcula el coeficiente de correlación de Pearson entre las columnas `x` y `y` de la tabla `datos`, usando la fórmula estadística estándar.
 
 ```sql
 DELIMITER $$
