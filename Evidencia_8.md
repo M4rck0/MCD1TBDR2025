@@ -1,4 +1,4 @@
-# 📝 Tarea 8 — Composición, vistas y disparadores
+# Tarea 8 — Composición, vistas y disparadores
 
 ---
 
