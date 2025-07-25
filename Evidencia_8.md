@@ -95,7 +95,56 @@ Ejemplo del resultado:
 
 ---
 
-## Vistas (VIEW) con diferentes tipos de JOIN y subconsultas
+## Crear un TRIGGER
+
+### Paso 1: Crear la tabla de auditoría `bitacora_facturas`
+
+Esta tabla almacenará el ID de la factura insertada, la fecha y hora del evento, y el tipo de acción realizada.
+
+```sql
+CREATE TABLE bitacora_facturas (
+  id_bitacora INT AUTO_INCREMENT PRIMARY KEY,
+  id_factura INT,
+  fecha_evento TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  tipo_accion VARCHAR(50)
+);
+```
+
+
+
+### Paso 2: Crear el trigger despues_insertar_factura
+
+Este disparador se ejecutará automáticamente después de cada inserción en la tabla invoice y registrará el evento en bitacora_facturas.
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER despues_insertar_factura
+AFTER INSERT ON invoice
+FOR EACH ROW
+BEGIN
+  INSERT INTO bitacora_facturas (id_factura, tipo_accion)
+  VALUES (NEW.InvoiceId, 'INSERCIÓN');
+END $$
+
+DELIMITER ;
+```
+
+### Paso 3: Insertar una nueva factura de prueba
+
+```sql
+INSERT INTO invoice (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingCountry, Total)
+VALUES (1000, 1, NOW(), 'Av. Reforma 123', 'Ciudad de México', 'México', 200);
+```
+
+### Paso 4: Verificar los resultados
+
+Consulta la tabla bitacora_facturas para comprobar que el trigger registró el evento correctamente:
+
+```sql
+SELECT * FROM bitacora_facturas;
+```
+
 
 
 
