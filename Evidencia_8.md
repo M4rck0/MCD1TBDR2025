@@ -144,6 +144,11 @@ Consulta la tabla bitacora_facturas para comprobar que el trigger registró el e
 ```sql
 SELECT * FROM bitacora_facturas;
 ```
+Resultado:
+
+| id_bitacora  | id_factura  | fecha_evento        | tipo_accion |
+| ------------ | ----------- | ------------------- | ------------ |
+| 1            | 1000        | 2025-07-24 19:55:00 | INSERCIÓN    |
 
 
 
