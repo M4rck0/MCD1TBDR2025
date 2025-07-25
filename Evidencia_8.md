@@ -113,7 +113,7 @@ CREATE TABLE bitacora_facturas (
 
 
 
-### Paso 2: Crear el trigger despues_insertar_factura
+### Paso 2: Crear el trigger `despues_insertar_factura`
 
 Este disparador se ejecutará automáticamente después de cada inserción en la tabla invoice y registrará el evento en bitacora_facturas.
 
