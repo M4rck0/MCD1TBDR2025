@@ -1,11 +1,11 @@
-# 📝 Tarea 8 — Base de Datos Chinook (MySQL)
+# 📝 Tarea 8 — Composición, vistas y disparadores
 
 ---
 
 ## Vistas (VIEW) con diferentes tipos de JOIN y subconsultas
 
 
-### 🔹 1. Vista con `INNER JOIN`
+### 🔹 1. Vista con `JOIN`
 Lista todos los clientes, incluso aquellos que aún no han generado facturas.
 
 ```sql
@@ -14,6 +14,15 @@ SELECT a.AlbumId, a.Title AS AlbumTitle, ar.Name AS ArtistName
 FROM Album a
 JOIN Artist ar ON a.ArtistId = ar.ArtistId;
 ```
+
+Ejemplo del resultado:
+| AlbumId | AlbumTitle                             | ArtistName |
+|---------|----------------------------------------|------------|
+| 1       | For Those About To Rock We Salute You  | AC/DC      |
+| 2       | Balls to the Wall                      | Accept     |
+| 3       | Restless and Wild                      | Accept     |
+| 4       | Let There Be Rock                      | AC/DC      |
+| 5       | Big Ones                               | Aerosmith  |
 
 
 
@@ -27,6 +36,16 @@ FROM Customer c
 LEFT JOIN Invoice i ON c.CustomerId = i.CustomerId;
 ```
 
+Ejemplo del resultado:
+| CustomerId | FirstName | LastName  | InvoiceId |
+|------------|-----------|-----------|-----------|
+| 1          | Luís      | Gonçalves | 98        |
+| 1          | Luís      | Gonçalves | 121       |
+| 1          | Luís      | Gonçalves | 143       |
+| 1          | Luís      | Gonçalves | 195       |
+| 1          | Luís      | Gonçalves | 316       |
+
+
 
 
 ### 🔹 3. Vista con `RIGHT JOIN`
@@ -38,6 +57,15 @@ SELECT e.EmployeeId, e.FirstName, c.CustomerId, c.FirstName AS CustomerFirstName
 FROM Employee e
 RIGHT JOIN Customer c ON e.EmployeeId = c.SupportRepId;
 ```
+
+Ejemplo del resultado:
+| EmployeeId | FirstName | CustomerId | CustomerFirstName |
+|------------|-----------|------------|-------------------|
+| 3          | Jane      | 1          | Luís              |
+| 5          | Steve     | 2          | Leonie            |
+| 3          | Jane      | 3          | François          |
+| 4          | Margaret  | 4          | Bjørn             |
+| 4          | Margaret  | 5          | František         |
 
 
 
@@ -55,3 +83,21 @@ WHERE CustomerId IN (
   HAVING COUNT(*) > 5
 );
 ```
+Ejemplo del resultado:
+| FirstName | LastName   |
+|-----------|------------|
+| Luís      | Gonçalves  |
+| Leonie    | Köhler     |
+| François  | Tremblay   |
+| Bjørn     | Hansen     |
+| František | Wichterlová|
+
+
+---
+
+## Vistas (VIEW) con diferentes tipos de JOIN y subconsultas
+
+
+
+
+
