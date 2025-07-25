@@ -9,10 +9,10 @@
 Lista todos los clientes, incluso aquellos que aún no han generado facturas.
 
 ```sql
-CREATE VIEW Vista_Join AS
+CREATE VIEW vista_join AS
 SELECT a.AlbumId, a.Title AS AlbumTitle, ar.Name AS ArtistName
-FROM Album a
-JOIN Artist ar ON a.ArtistId = ar.ArtistId;
+FROM Album AS a
+JOIN Artist AS ar ON a.ArtistId = ar.ArtistId;
 ```
 
 Ejemplo del resultado:
@@ -30,10 +30,10 @@ Ejemplo del resultado:
 Lista todos los clientes, incluso aquellos que aún no han generado facturas.
 
 ```sql
-CREATE VIEW Vista_LeftJoin AS
+CREATE VIEW vista_leftjoin AS
 SELECT c.CustomerId, c.FirstName, c.LastName, i.InvoiceId
-FROM Customer c
-LEFT JOIN Invoice i ON c.CustomerId = i.CustomerId;
+FROM Customer AS c
+LEFT JOIN Invoice AS i ON c.CustomerId = i.CustomerId;
 ```
 
 Ejemplo del resultado:
@@ -52,10 +52,10 @@ Ejemplo del resultado:
 Muestra los empleados y los clientes que tienen asignados como representantes de soporte.
 
 ```sql
-CREATE VIEW Vista_RightJoin AS
+CREATE VIEW vista_rightjoin AS
 SELECT e.EmployeeId, e.FirstName, c.CustomerId, c.FirstName AS CustomerFirstName
-FROM Employee e
-RIGHT JOIN Customer c ON e.EmployeeId = c.SupportRepId;
+FROM Employee AS e
+RIGHT JOIN Customer AS c ON e.EmployeeId = c.SupportRepId;
 ```
 
 Ejemplo del resultado:
@@ -73,7 +73,7 @@ Ejemplo del resultado:
 Devuelve los clientes que han generado más de 5 facturas.
 
 ```sql
-CREATE VIEW Vista_Subconsulta AS
+CREATE VIEW vista_subconsulta AS
 SELECT FirstName, LastName
 FROM Customer
 WHERE CustomerId IN (
@@ -82,6 +82,7 @@ WHERE CustomerId IN (
   GROUP BY CustomerId
   HAVING COUNT(*) > 5
 );
+
 ```
 Ejemplo del resultado:
 | FirstName | LastName   |
@@ -134,7 +135,7 @@ DELIMITER ;
 
 ```sql
 INSERT INTO invoice (InvoiceId, CustomerId, InvoiceDate, BillingAddress, BillingCity, BillingCountry, Total)
-VALUES (1000, 1, NOW(), 'Av. Reforma 123', 'Ciudad de México', 'México', 200);
+VALUES (1000, 1, NOW(), 'Av. Georg Cantor', 'Ciudad de México', 'México', 100);
 ```
 
 ### Paso 4: Verificar los resultados
@@ -148,8 +149,29 @@ Resultado:
 
 | id_bitacora  | id_factura  | fecha_evento        | tipo_accion |
 | ------------ | ----------- | ------------------- | ------------ |
-| 1            | 1000        | 2025-07-24 19:55:00 | INSERCIÓN    |
+| 1            | 1000        | 2025-07-24 19:55:00 | INSERT    |
 
+
+
+---
+
+## Explicación de resultados y utilidad de vistas y disparador
+
+### Vistas (VIEW)
+
+Las vistas permiten encapsular consultas complejas y reutilizarlas como si fueran tablas. A continuación se resume el objetivo de cada una:
+
+---
+
+### Disparador (TRIGGER)
+
+El disparador `despues_insertar_factura` registra automáticamente cada inserción en la tabla `invoice` dentro de una tabla llamada `bitacora_facturas`.
+
+Esto permite:
+
+- Llevar una **bitácora automatizada** sin intervención manual.
+- Tener **evidencia de cambios** para auditoría o validación de procesos.
+- Facilitar la depuración o análisis de eventos recientes.
 
 
 
