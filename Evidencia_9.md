@@ -4,6 +4,8 @@
 
 ## Correlación entre dos conjuntos de datos
 
+Calcula el coeficiente de correlación de Pearson entre las columnas `x` e `y` de la tabla `datos`, usando la fórmula estadística estándar.
+
 ```sql
 DELIMITER $$
 
@@ -66,12 +68,14 @@ CALL calcular_correlacion(@r);
 SELECT @r AS correlacion;
 ```
 
-Resultado: 1
+Resultado: $1$
 
 
 
 
 ## Distancia de Levenshtein entre cadenas de caracteres
+
+Esta función calcula la distancia de Levenshtein entre dos cadenas, la cual representa el número mínimo de operaciones (inserciones, eliminaciones o sustituciones) necesarias para transformar una cadena en otra.
 
 ```sql
 DELIMITER $$
@@ -134,6 +138,8 @@ Resultado: $1$
 
 
 ## Cantidad de elementos de un arreglo
+
+Esta función recibe una cadena de texto en la que los elementos están separados por comas (`,`) y devuelve la cantidad total de elementos. Se simula el comportamiento de un arreglo al contar las comas y ajusta el resultado dependiendo de si la cadena está vacía. 
 
 ```sql
 DELIMITER $$
